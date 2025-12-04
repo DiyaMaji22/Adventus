@@ -1,6 +1,7 @@
 import React from 'react'
 import Navbar from '../components/Navbar'
 import { Gamepad2, Users, Trophy, UserPlus } from 'lucide-react'
+import Footer from '../components/Footer'
 
 const Home = () => {
   return (
@@ -178,6 +179,7 @@ const Home = () => {
           </div>
         </div>
       </div>
+      <Footer />
     </>
   )
 }

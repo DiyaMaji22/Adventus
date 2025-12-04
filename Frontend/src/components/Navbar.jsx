@@ -152,12 +152,8 @@ const Navbar = () => {
        
         <div className='hidden lg:flex items-center gap-6'>
           <div className='cart-item relative cursor-pointer z-10'>
-            <svg className='w-5 h-5 text-gray-400 relative z-10' fill='none' stroke='currentColor' viewBox='0 0 24 24'>
-              <path strokeLinecap='round' strokeLinejoin='round' strokeWidth={2} d='M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z' />
-            </svg>
-            <span className='absolute -top-2 -right-2 bg-[#00e6ff] text-[#060a13] text-xs w-5 h-5 rounded-full flex items-center justify-center font-bold z-20'>
-              0
-            </span>
+            
+            
           </div>
           <button className='login-btn text-gray-400 text-sm font-medium relative z-10'>
             LOGIN
@@ -167,7 +163,7 @@ const Navbar = () => {
           </button>
         </div>
       </div>
-
+  
       
       <div className={`mobile-menu ${isMenuOpen ? 'open' : ''} lg:hidden bg-[#0a0f1a] mt-4`}>
         <ul className='flex flex-col gap-4 p-4 text-sm font-medium'>
