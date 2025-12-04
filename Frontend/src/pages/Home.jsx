@@ -2,8 +2,63 @@ import React from 'react'
 import Navbar from '../components/Navbar'
 import { Gamepad2, Users, Trophy, UserPlus } from 'lucide-react'
 import Footer from '../components/Footer'
-
+import { ArrowRight } from 'lucide-react'
+import { Calendar } from 'lucide-react'
 const Home = () => {
+  
+    const teams = [
+    {
+      id: 1,
+      game: 'VALORANT',
+      category: 'FPS',
+      description: 'Our VALORANT roster competes at the highest level, showcasing tactical excellence and...',
+      players: 5,
+      logo: 'V'
+    },
+    {
+      id: 2,
+      game: 'League of Legends',
+      category: 'MOBA',
+      description: 'Dominating the Rift with strategic gameplay and team synergy.',
+      players: 2,
+      logo: 'L'
+    },
+    {
+      id: 3,
+      game: 'Counter-Strike 2',
+      category: 'FPS',
+      description: 'Precision aim and tactical excellence in Counter-Strike.',
+      players: 0,
+      logo: 'C'
+    }
+  ];
+const newsItems = [
+    {
+      id: 1,
+      category: 'TOURNAMENT',
+      date: 'Jan 21, 2024',
+      title: 'Team Aventus Wins VCT Challengers 2024',
+      description: 'Our VALORANT roster dominates the competition to claim the championship title.',
+      categoryColor: 'bg-purple-500'
+    },
+    {
+      id: 2,
+      category: 'ANNOUNCEMENT',
+      date: 'Jan 18, 2024',
+      title: 'Team Aventus Announces New Partnership with TechGear',
+      description: 'Exciting new sponsorship deal brings premium gaming peripherals to our players.',
+      categoryColor: 'bg-purple-500'
+    },
+    {
+      id: 3,
+      category: 'ROSTER',
+      date: 'Jan 10, 2024',
+      title: 'Roster Update: New Talent Joins the Family',
+      description: 'Welcoming our newest players to the Team Aventus roster.',
+      categoryColor: 'bg-purple-500'
+    }
+  ];
+  
   return (
     <>
       <style>{`
@@ -178,6 +233,133 @@ const Home = () => {
             </div>
           </div>
         </div>
+        <div className="bg-slate-950 text-white py-20 px-6">
+      <div className="max-w-7xl mx-auto">
+        {/* Header */}
+        <div className="flex items-start justify-between mb-12 flex-wrap gap-6">
+          <div>
+            <h2 className="text-4xl md:text-5xl font-bold mb-4">
+              Our <span className="text-cyan-400">Teams</span>
+            </h2>
+            <p className="text-gray-400 text-lg">
+              Competing at the highest level across multiple titles
+            </p>
+          </div>
+          <button className="border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-slate-950 transition-all px-6 py-3 rounded-lg flex items-center gap-2 font-semibold uppercase text-sm tracking-wider">
+            View All Teams
+            <ArrowRight size={18} />
+          </button>
+        </div>
+
+      
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {teams.map((team) => (
+            <div
+              key={team.id}
+              className="bg-gradient-to-b from-slate-800/50 to-slate-900/50 rounded-xl overflow-hidden border border-slate-800 hover:border-cyan-400/50 transition-all group"
+            >
+             
+              <div className="relative h-48 bg-gradient-to-br from-slate-800 to-slate-900 flex items-center justify-center">
+                <div className="absolute top-4 right-4">
+                  <span className="bg-cyan-400/20 text-cyan-400 px-3 py-1 rounded-full text-xs font-semibold border border-cyan-400/30">
+                    {team.category}
+                  </span>
+                </div>
+                <div className="text-8xl font-bold text-slate-700/30 group-hover:text-slate-600/30 transition-colors">
+                  {team.logo}
+                </div>
+              </div>
+
+              
+              <div className="p-6">
+                <h3 className="text-2xl font-bold mb-3">{team.game}</h3>
+                <p className="text-gray-400 text-sm mb-6 leading-relaxed">
+                  {team.description}
+                </p>
+
+                
+                <div className="flex items-center justify-between">
+                  <div className="flex items-center gap-2 text-gray-400 text-sm">
+                    <Users size={16} />
+                    <span>{team.players} Players</span>
+                  </div>
+                  <button className="text-cyan-400 hover:text-cyan-300 transition-colors flex items-center gap-1 font-semibold text-sm group">
+                    View Team
+                    <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
+                  </button>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+    <div className="bg-slate-950 text-white py-20 px-6">
+      <div className="max-w-7xl mx-auto">
+        {/* Header */}
+        <div className="flex items-start justify-between mb-12 flex-wrap gap-6">
+          <div>
+            <h2 className="text-4xl md:text-5xl font-bold mb-4">
+              Latest <span className="text-cyan-400">News</span>
+            </h2>
+            <p className="text-gray-400 text-lg">
+              Stay updated with our latest announcements and victories
+            </p>
+          </div>
+          <button className="border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-slate-950 transition-all px-6 py-3 rounded-lg flex items-center gap-2 font-semibold uppercase text-sm tracking-wider">
+            View All News
+            <ArrowRight size={18} />
+          </button>
+        </div>
+
+       
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {newsItems.map((news) => (
+            <div
+              key={news.id}
+              className="bg-gradient-to-b from-slate-800/50 to-slate-900/50 rounded-xl overflow-hidden border border-slate-800 hover:border-cyan-400/50 transition-all group"
+            >
+             
+              <div className="relative h-48 bg-gradient-to-br from-slate-800 to-slate-900 flex items-center justify-center">
+                <div className="absolute top-4 left-4">
+                  <span className={`${news.categoryColor} text-white px-4 py-1.5 rounded-full text-xs font-bold uppercase`}>
+                    {news.category}
+                  </span>
+                </div>
+                <div className="text-7xl font-bold text-slate-700/20 group-hover:text-slate-600/20 transition-colors">
+                  NEWS
+                </div>
+              </div>
+
+             
+              <div className="p-6">
+                {/* Date */}
+                <div className="flex items-center gap-2 text-gray-500 text-sm mb-3">
+                  <Calendar size={14} />
+                  <span>{news.date}</span>
+                </div>
+
+               
+                <h3 className="text-xl font-bold mb-3 leading-tight">
+                  {news.title}
+                </h3>
+
+                
+                <p className="text-gray-400 text-sm mb-6 leading-relaxed">
+                  {news.description}
+                </p>
+
+               
+                <button className="text-cyan-400 hover:text-cyan-300 transition-colors flex items-center gap-1 font-semibold text-sm group">
+                  Read More
+                  <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
+                </button>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
       </div>
       <Footer />
     </>
