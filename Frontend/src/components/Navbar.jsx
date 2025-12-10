@@ -1,8 +1,10 @@
 import React, { useState } from 'react'
+import { Link, useLocation } from 'react-router-dom'
 import {project_logo} from '../assets'
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const location = useLocation()
 
   return (
     <nav className='bg-[#060a13] px-4 md:px-8 py-4'>
@@ -138,11 +140,11 @@ const Navbar = () => {
 
         
         <ul className='hidden lg:flex items-center gap-8 list-none m-0 p-0 text-sm font-medium'>
-          <li className='nav-item text-[#00e6ff] cursor-pointer relative z-10'>HOME</li>
-          <li className='nav-item text-gray-400 cursor-pointer relative z-10'>ABOUT</li>
+          <li><Link to="/" className={`nav-item cursor-pointer relative z-10 ${location.pathname === '/' ? 'text-[#00e6ff]' : 'text-gray-400'}`}>HOME</Link></li>
+          <li><Link to="/about" className={`nav-item cursor-pointer relative z-10 ${location.pathname === '/about' ? 'text-[#00e6ff]' : 'text-gray-400'}`}>ABOUT</Link></li>
           <li className='nav-item text-gray-400 cursor-pointer relative z-10'>TEAMS</li>
           <li className='nav-item text-gray-400 cursor-pointer relative z-10'>PLAYERS</li>
-          <li className='nav-item text-gray-400 cursor-pointer relative z-10'>NEWS</li>
+          <li><Link to="/news" className={`nav-item cursor-pointer relative z-10 ${location.pathname.includes('/news') ? 'text-[#00e6ff]' : 'text-gray-400'}`}>NEWS</Link></li>
           <li className='nav-item text-gray-400 cursor-pointer relative z-10'>PARTNERS</li>
           <li className='nav-item text-gray-400 cursor-pointer relative z-10'>SHOP</li>
           <li className='nav-item text-gray-400 cursor-pointer relative z-10'>CAREERS</li>
@@ -167,11 +169,11 @@ const Navbar = () => {
       
       <div className={`mobile-menu ${isMenuOpen ? 'open' : ''} lg:hidden bg-[#0a0f1a] mt-4`}>
         <ul className='flex flex-col gap-4 p-4 text-sm font-medium'>
-          <li className='text-[#00e6ff] cursor-pointer py-2 border-b border-gray-800'>HOME</li>
-          <li className='text-gray-400 cursor-pointer py-2 border-b border-gray-800 hover:text-white'>ABOUT</li>
+          <li><Link to="/" className={`cursor-pointer py-2 border-b border-gray-800 block ${location.pathname === '/' ? 'text-[#00e6ff]' : 'text-gray-400 hover:text-white'}`}>HOME</Link></li>
+          <li><Link to="/about" className={`cursor-pointer py-2 border-b border-gray-800 block ${location.pathname === '/about' ? 'text-[#00e6ff]' : 'text-gray-400 hover:text-white'}`}>ABOUT</Link></li>
           <li className='text-gray-400 cursor-pointer py-2 border-b border-gray-800 hover:text-white'>TEAMS</li>
           <li className='text-gray-400 cursor-pointer py-2 border-b border-gray-800 hover:text-white'>PLAYERS</li>
-          <li className='text-gray-400 cursor-pointer py-2 border-b border-gray-800 hover:text-white'>NEWS</li>
+          <li><Link to="/news" className={`cursor-pointer py-2 border-b border-gray-800 block ${location.pathname.includes('/news') ? 'text-[#00e6ff]' : 'text-gray-400 hover:text-white'}`}>NEWS</Link></li>
           <li className='text-gray-400 cursor-pointer py-2 border-b border-gray-800 hover:text-white'>PARTNERS</li>
           <li className='text-gray-400 cursor-pointer py-2 border-b border-gray-800 hover:text-white'>SHOP</li>
           <li className='text-gray-400 cursor-pointer py-2 border-b border-gray-800 hover:text-white'>CAREERS</li>
