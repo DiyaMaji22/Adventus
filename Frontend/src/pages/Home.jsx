@@ -155,20 +155,20 @@ const newsItems = [
           width: 0;
           height: 0;
           border-radius: 50%;
-          background: radial-gradient(circle, rgba(34, 211, 238, 0.4) 0%, rgba(34, 211, 238, 0.2) 50%, transparent 70%);
+          background: radial-gradient(circle, rgba(34, 211, 238, 0.3) 0%, rgba(34, 211, 238, 0.15) 50%, transparent 70%);
           transform: translate(-50%, -50%);
-          transition: width 0.5s ease, height 0.5s ease;
+          transition: width 0.4s ease, height 0.4s ease;
           z-index: -1;
-          filter: blur(20px);
+          filter: blur(15px);
         }
 
         .partner-card:hover::before {
-          width: 400px;
-          height: 400px;
+          width: 280px;
+          height: 280px;
         }
 
         .partner-card:hover {
-          box-shadow: 0 0 40px rgba(34, 211, 238, 0.6), 0 0 80px rgba(34, 211, 238, 0.3);
+          box-shadow: 0 0 25px rgba(34, 211, 238, 0.4), 0 0 50px rgba(34, 211, 238, 0.2);
         }
 
         .partner-card span {
@@ -240,8 +240,8 @@ const newsItems = [
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 max-w-5xl w-full mt-12">
             
             
-            <div className="stat-card bg-slate-900/30 backdrop-blur-sm border border-slate-800/50 rounded-xl p-8 flex flex-col items-center justify-center text-center hover:border-cyan-400/30 hover:bg-slate-900/40 transition-all duration-300 group">
-              <div className="mb-4 text-cyan-400 group-hover:scale-110 transition-transform duration-300">
+            <div className=" bg-slate-900/30  border border-slate-800/50 rounded-xl p-8 flex flex-col items-center justify-center text-center ">
+              <div className="mb-4 text-cyan-400  hover:border-cyan-400 transition-colors duration-300">
                 <Gamepad2 size={40} strokeWidth={1.5} />
               </div>
               <div className="text-5xl font-bold text-cyan-400 mb-2">4</div>
