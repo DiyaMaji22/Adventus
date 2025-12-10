@@ -113,26 +113,27 @@ const newsItems = [
 
         .stat-card {
           position: relative;
-          overflow: hidden;
+          isolation: isolate;
         }
 
         .stat-card::before {
           content: '';
           position: absolute;
-          top: 50%;
-          left: 50%;
-          width: 0;
-          height: 0;
-          border-radius: 50%;
-          background: rgba(34, 211, 238, 0.15);
-          transform: translate(-50%, -50%);
-          transition: width 0.4s ease, height 0.4s ease;
-          z-index: 0;
+          top: -25px;
+          left: -25px;
+          right: -25px;
+          bottom: -25px;
+          border-radius: 16px;
+          background: radial-gradient(ellipse at center, rgba(34, 211, 238, 0.6) 0%, rgba(34, 211, 238, 0.3) 25%, transparent 65%);
+          opacity: 0;
+          transition: opacity 0.4s ease;
+          z-index: -1;
+          filter: blur(35px);
+          pointer-events: none;
         }
 
         .stat-card:hover::before {
-          width: 250px;
-          height: 250px;
+          opacity: 1;
         }
 
         .stat-card > * {
@@ -406,7 +407,7 @@ const newsItems = [
        <div className="bg-[#0b111e] min-h-screen py-16 px-4">
       
       <div className="flex flex-col items-center justify-center mb-16">
-        <h2 className="text-4xl md:text-5xl font-bold mb-4">
+        <h2 className="text-4xl md:text-6xl font-bold mb-4">
           Our <span className="bg-gradient-to-r from-cyan-500 to-purple-500 bg-clip-text text-transparent text-6xl">Partners</span>
         </h2>
         <p className="text-gray-400 text-lg">Proudly supported by industry leaders</p>
@@ -490,7 +491,7 @@ const newsItems = [
             <h3 className="text-white text-xl font-bold mb-2">Creators</h3>
             <p className="text-gray-400 text-sm">Build your personal brand</p>
           </div>
-
+    
           
           <div className="bg-[#0d1421] rounded-xl p-6 border border-gray-800 hover:border-cyan-500/50 transition-all duration-300 flex flex-col items-center text-center">
             <div className="mb-4">
