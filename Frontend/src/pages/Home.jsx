@@ -299,10 +299,10 @@ const newsItems = [
           {teams.map((team) => (
             <div
               key={team.id}
-              className="bg-gradient-to-b from-slate-800/50 to-slate-900/50 rounded-xl overflow-hidden border border-slate-800 hover:border-cyan-400/50 transition-all group"
+              className="bg-linear-to-b from-slate-800/50 to-slate-900/50 rounded-xl overflow-hidden border border-slate-800 hover:border-cyan-400/50 transition-all group"
             >
              
-              <div className="relative h-48 bg-gradient-to-br from-slate-800 to-slate-900 flex items-center justify-center">
+              <div className="relative h-48 bg-linear-to-br from-slate-800 to-slate-900 flex items-center justify-center">
                 <div className="absolute top-4 right-4">
                   <span className="bg-cyan-400/20 text-cyan-400 px-3 py-1 rounded-full text-xs font-semibold border border-cyan-400/30">
                     {team.category}
@@ -360,10 +360,10 @@ const newsItems = [
           {newsItems.map((news) => (
             <div
               key={news.id}
-              className="bg-gradient-to-b from-slate-800/50 to-slate-900/50 rounded-xl overflow-hidden border border-slate-800 hover:border-cyan-400/50 transition-all group"
+              className="bg-linear-to-b from-slate-800/50 to-slate-900/50 rounded-xl overflow-hidden border border-slate-800 hover:border-cyan-400/50 transition-all group"
             >
              
-              <div className="relative h-48 bg-gradient-to-br from-slate-800 to-slate-900 flex items-center justify-center">
+              <div className="relative h-48 bg-linear-to-br from-slate-800 to-slate-900 flex items-center justify-center">
                 <div className="absolute top-4 left-4">
                   <span className={`${news.categoryColor} text-white px-4 py-1.5 rounded-full text-xs font-bold uppercase`}>
                     {news.category}
@@ -408,7 +408,7 @@ const newsItems = [
       
       <div className="flex flex-col items-center justify-center mb-16">
         <h2 className="text-4xl md:text-6xl font-bold mb-4">
-          Our <span className="bg-gradient-to-r from-cyan-500 to-purple-500 bg-clip-text text-transparent text-6xl">Partners</span>
+          Our <span className="bg-linear-to-r from-cyan-500 to-purple-500 bg-clip-text text-transparent text-6xl">Partners</span>
         </h2>
         <p className="text-gray-400 text-lg">Proudly supported by industry leaders</p>
       </div>
@@ -460,12 +460,12 @@ const newsItems = [
       </div>
     </div>
     </div>
-    <div className="bg-gradient-to-b from-[#0a1628] to-[#0f1c2e] py-16 px-4">
+    <div className="bg-linear-to-b from-[#0a1628] to-[#0f1c2e] py-16 px-4">
       <div className="max-w-5xl mx-auto border border-cyan-500/30 rounded-3xl bg-[#0d1421]/50 backdrop-blur-sm p-8 md:p-12">
        
         <div className="text-center mb-12">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            Ready to <span className="bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">Join</span> the Team?
+            Ready to <span className="bg-linear-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">Join</span> the Team?
           </h2>
           <p className="text-gray-400 text-lg max-w-3xl mx-auto leading-relaxed">
             We're always looking for talented players, content creators, and staff members. Take your first step towards becoming part of our winning legacy.

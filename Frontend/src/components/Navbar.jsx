@@ -142,7 +142,7 @@ const Navbar = () => {
         <ul className='hidden lg:flex items-center gap-8 list-none m-0 p-0 text-sm font-medium'>
           <li><Link to="/" className={`nav-item cursor-pointer relative z-10 ${location.pathname === '/' ? 'text-[#00e6ff]' : 'text-gray-400'}`}>HOME</Link></li>
           <li><Link to="/about" className={`nav-item cursor-pointer relative z-10 ${location.pathname === '/about' ? 'text-[#00e6ff]' : 'text-gray-400'}`}>ABOUT</Link></li>
-          <li className='nav-item text-gray-400 cursor-pointer relative z-10'>TEAMS</li>
+          <li><Link to="/teams" className={`nav-item cursor-pointer relative z-10 ${location.pathname === '/teams' ? 'text-[#00e6ff]' : 'text-gray-400'}`}>TEAMS</Link></li>
           <li className='nav-item text-gray-400 cursor-pointer relative z-10'>PLAYERS</li>
           <li><Link to="/news" className={`nav-item cursor-pointer relative z-10 ${location.pathname.includes('/news') ? 'text-[#00e6ff]' : 'text-gray-400'}`}>NEWS</Link></li>
           <li className='nav-item text-gray-400 cursor-pointer relative z-10'>PARTNERS</li>
@@ -171,7 +171,7 @@ const Navbar = () => {
         <ul className='flex flex-col gap-4 p-4 text-sm font-medium'>
           <li><Link to="/" className={`cursor-pointer py-2 border-b border-gray-800 block ${location.pathname === '/' ? 'text-[#00e6ff]' : 'text-gray-400 hover:text-white'}`}>HOME</Link></li>
           <li><Link to="/about" className={`cursor-pointer py-2 border-b border-gray-800 block ${location.pathname === '/about' ? 'text-[#00e6ff]' : 'text-gray-400 hover:text-white'}`}>ABOUT</Link></li>
-          <li className='text-gray-400 cursor-pointer py-2 border-b border-gray-800 hover:text-white'>TEAMS</li>
+          <li><Link to="/teams" className={`cursor-pointer py-2 border-b border-gray-800 block ${location.pathname === '/teams' ? 'text-[#00e6ff]' : 'text-gray-400 hover:text-white'}`}>TEAMS</Link></li>
           <li className='text-gray-400 cursor-pointer py-2 border-b border-gray-800 hover:text-white'>PLAYERS</li>
           <li><Link to="/news" className={`cursor-pointer py-2 border-b border-gray-800 block ${location.pathname.includes('/news') ? 'text-[#00e6ff]' : 'text-gray-400 hover:text-white'}`}>NEWS</Link></li>
           <li className='text-gray-400 cursor-pointer py-2 border-b border-gray-800 hover:text-white'>PARTNERS</li>
