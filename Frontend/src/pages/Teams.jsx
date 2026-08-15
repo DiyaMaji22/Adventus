@@ -231,7 +231,7 @@ const Teams = () => {
                 </div>
 
                 <div className="mb-6">
-                  <div className="h-48 bg-gradient-to-br from-teal-900/30 via-slate-800/30 to-purple-900/30 rounded-lg flex items-center justify-center mb-6">
+                  <div className="h-48 bg-gradient-to-bxr from-teal-900/30 via-slate-800/30 to-purple-900/30 rounded-lg flex items-center justify-center mb-6">
                     <div className="text-6xl font-bold text-slate-600/40">
                       {team.game.split(' ').map(word => word[0]).join('')}
                     </div>
